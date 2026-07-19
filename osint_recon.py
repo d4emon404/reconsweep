@@ -3,9 +3,9 @@
 ReconSweep - OSINT Username Recon Tool
 ========================================
 
-Ek username input lo, multiple platforms pe check karo ki wo exist karta hai ya nahi.
-Sirf public HTTP requests use karta hai — koi login/bypass/exploit nahi.
-Legal & ethical OSINT ke liye banaya gaya hai (apna research, bug bounty scope, CTF recon).
+Takes a username as input and checks whether it exists across multiple platforms.
+Uses only public HTTP requests — no login, bypass, or exploitation involved.
+Built for legal and ethical OSINT purposes (personal research, bug bounty scope, CTF recon).
 
 Author  : D4emon404
 GitHub  : https://github.com/D4emon404
@@ -18,9 +18,9 @@ Usage:
     python3 osint_recon.py <username> --no-color
 
 Disclaimer:
-    Educational aur ethical OSINT purposes ke liye banaya gaya hai.
-    Sirf apni research, authorized engagements, ya public info gathering ke liye use karo.
-    Kisi bhi platform ke Terms of Service ka respect karo.
+    Built for educational and ethical OSINT purposes only.
+    Use only for your own research, authorized engagements, or public info gathering.
+    Respect the Terms of Service of every platform.
 """
 
 import argparse
@@ -49,8 +49,9 @@ BANNER = f"""{Colors.CYAN}{Colors.BOLD}
   OSINT Username Recon Tool  |  by {__author__}  |  v{__version__}
 {Colors.RESET}"""
 
-# Platform: URL template, aur "not found" ka signal
-# Kuch sites 404 dete hain missing user pe, kuch 200 dete hain hamesha (JS-rendered) -> unhe skip/handle kiya hai
+# Platform: URL template
+# Some sites return 404 for a missing user, others always return 200 (JS-rendered pages)
+# — those cases fall into the "unclear" bucket for manual verification.
 PLATFORMS = {
     "GitHub":        "https://github.com/{}",
     "Twitter/X":     "https://x.com/{}",
