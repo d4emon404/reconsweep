@@ -1,6 +1,6 @@
 # ReconSweep 🔍
 
-**OSINT Username Recon Tool** — ek username daalo, 20+ platforms pe check karo ki wo kahan-kahan exist karta hai.
+**OSINT Username Recon Tool** — enter a username, check 20+ platforms to see where it exists.
 
 Made with 🐍 by [**D4emon404**](https://github.com/D4emon404)
 
@@ -8,11 +8,11 @@ Made with 🐍 by [**D4emon404**](https://github.com/D4emon404)
 
 ## ✨ Features
 
-- 🔎 20+ platforms check karta hai — GitHub, Instagram, Reddit, Twitter/X, TryHackMe, HackTheBox, Telegram, YouTube, aur more
+- 🔎 Checks 20+ platforms — GitHub, Instagram, Reddit, Twitter/X, TryHackMe, HackTheBox, Telegram, YouTube, and more
 - ⚡ Multi-threaded — fast parallel scanning
 - 🎨 Colored CLI output (Found / Not Found / Unclear)
-- 💾 Results ko `.txt` file mein export kar sakte ho
-- 🛡️ 100% legal & ethical — sirf public HTTP requests, koi login/bypass/exploit nahi
+- 💾 Export results to a `.txt` file
+- 🛡️ 100% legal & ethical — only public HTTP requests, no login/bypass/exploit involved
 
 ## 📦 Installation
 
@@ -27,13 +27,13 @@ pip install -r requirements.txt
 ```bash
 python3 osint_recon.py <username>
 
-# Results ko file mein save karo
+# Save results to a file
 python3 osint_recon.py <username> -o results.txt
 
-# Color output disable karo
+# Disable colored output
 python3 osint_recon.py <username> --no-color
 
-# Version check
+# Check version
 python3 osint_recon.py -v
 ```
 
@@ -43,7 +43,7 @@ python3 osint_recon.py -v
 $ python3 osint_recon.py D4emon404
 ```
 
-Output kuch aisa dikhega:
+Output will look something like this:
 
 ```
 [+] FOUND (3)
@@ -63,22 +63,22 @@ Output kuch aisa dikhega:
 
 GitHub, GitLab, Twitter/X, Instagram, Facebook, Reddit, TryHackMe, HackTheBox, HackerOne, YouTube, TikTok, Telegram, Steam, Twitch, Medium, Dev.to, Pinterest, Keybase, Replit, SoundCloud.
 
-New platform add karna ho toh `PLATFORMS` dictionary mein bas ek line add karo — `osint_recon.py` ke top mein.
+Want to add a new platform? Just add a line to the `PLATFORMS` dictionary at the top of `osint_recon.py`.
 
 ## ⚠️ Disclaimer
 
-Ye tool sirf **educational aur ethical OSINT purposes** ke liye hai — apni khud ki digital footprint check karna, authorized penetration testing, bug bounty recon, ya CTF challenges. Kisi ki bhi privacy violate karne ya unauthorized surveillance ke liye use mat karo. Har platform ke Terms of Service ka respect karo.
+This tool is built for **educational and ethical OSINT purposes only** — checking your own digital footprint, authorized penetration testing, bug bounty recon, or CTF challenges. Do not use it to violate anyone's privacy or for unauthorized surveillance. Respect the Terms of Service of every platform.
 
 ## 🛠️ Tech Stack
 
 - Python 3
-- `requests` — HTTP calls ke liye
-- `concurrent.futures` — multi-threading ke liye
+- `requests` — for HTTP calls
+- `concurrent.futures` — for multi-threading
 
 ## 📄 License
 
-MIT License — free to use, modify, aur distribute karo.
+MIT License — free to use, modify, and distribute.
 
 ---
 
-⭐ Agar ye tool kaam aaya toh repo ko star karna mat bhoolna!
+⭐ If this tool was useful, don't forget to star the repo!
